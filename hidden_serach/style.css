@@ -1,0 +1,23 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --text      : #644a34;
+  --box       : #cca961;
+  --background: #a8dbab;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family    : "Roboto", sans-serif;
+  display        : flex;
+  flex-direction : column;
+  align-items    : center;
+  justify-content: center;
+  height         : 100vh;
+  overflow       : hidden;
+  margin         : 0;
+}
