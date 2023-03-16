@@ -1,6 +1,14 @@
 /* FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&family=Roboto:wght@400;700&display=swap');
 
+/* :root {
+  --line-border-fill : #4b2d3f;
+  --circles          : #694a5c;
+  --background       : #e2bdd2;
+  --line-border-empty: #ffffff;
+  --text             : #ffffff;
+} */
+
 * {
   box-sizing: border-box;
 }
