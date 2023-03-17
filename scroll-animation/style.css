@@ -45,18 +45,26 @@ h1 {
   box-shadow      : 2px 4px 5px rgba(0, 0, 0, 0.3);
   transition      : transform 0.4s ease;
   transform       : translateX(200%);
-  /* transform    : translateX(400%); -> This is for wide screens */
 }
 
 .box:nth-last-of-type(even) {
   transform       : translateX(-200%);
-  /* transform    : translateX(-400%); -> This is for wide screens */
 }
 
 .box.show {
   transform: translateX(0);
 }
 
-.box h2{
+.box h2 {
   font-size: 45px;
+}
+
+@media screen and (min-width: 1024px) {
+  .box {
+    transform: translateX(400%);
+  }
+
+  /* .box:nth-last-of-type(even) {
+    transform: translateX(-400%);
+  } */
 }
