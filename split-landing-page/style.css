@@ -1,0 +1,149 @@
+/* FONTS */
+@import url('https://fonts.cdnfonts.com/css/segoe-ui-4');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+:root {
+  --text                 : #ffffff;
+  --background           : #505050;
+  --left-bg-color        : rgba(0, 67, 156, 0.5);
+  --right-bg-color       : rgba(16, 124, 16, 0.5);
+  --left-btn-hover-color : rgba(0, 112, 204, 1);
+  --right-btn-hover-color: rgba(5, 75, 22, 1);
+
+  --hover-width: 75%;
+  --other-width: 25%;
+
+  --speed: 1000ms;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  height     : 100vh;
+  overflow   : hidden;
+  margin     : 0;
+}
+
+h1 {
+  font-size  : 4rem;
+  color      : var(--text);
+  position   : absolute;
+  left       : 50%;
+  top        : 20%;
+  transform  : translateX(-50%);
+  white-space: nowrap;
+}
+
+.btn {
+  position       : absolute;
+  display        : flex;
+  align-items    : center;
+  justify-content: center;
+
+  left     : 50%;
+  top      : 40%;
+  transform: translateX(-50%);
+  width    : 15rem;
+  padding  : 1.5rem;
+
+  color          : var(--text);
+  border         : var(--text) solid 0.2rem;
+  font-size      : 1rem;
+  font-weight    : bold;
+  text-transform : uppercase;
+  text-decoration: none;
+}
+
+.container {
+  position  : relative;
+  width     : 100%;
+  height    : 100%;
+  background: var(--background);
+}
+
+.split {
+  position: absolute;
+  width   : 50%;
+  height  : 100%;
+  overflow: hidden;
+}
+
+.split.left {
+  font-family      : 'Open Sans', sans-serif;
+  left             : 0;
+  background       : url('https://pixabay.com/get/g2abedc05d789470c9ed580ebe2c42e05a740b90e8e51e7183570fcda3a4c59912b14257202f10d9a48b10e05fa2d7f4c7291d4337ffd1593163ffadf573b99f6_1920.jpg');
+  background-repeat: no-repeat;
+  background-size  : cover;
+}
+
+.split.left::before {
+  content         : '';
+  position        : absolute;
+  width           : 100%;
+  height          : 100%;
+  background-color: var(--left-bg-color);
+}
+
+.split.left .btn:hover {
+  background-color: var(--left-btn-hover-color);
+  border-color    : var(--left-btn-hover-color);
+}
+
+.split.right .btn:hover {
+  background-color: var(--right-btn-hover-color);
+  border-color    : var(--right-btn-hover-color);
+}
+
+.split.right {
+  font-family      : 'Segoe UI', sans-serif;
+  right            : 0;
+  background       : url('https://pixabay.com/get/gd132318b222cd5ea9bbdf3a01e8b2eb5a831e0809a66994515fd9c7e2b00a84ee33f34b19114216bc2869d91cf92bd18f2340fdcd8ad0b7434554b9d3759f1d8_1920.jpg');
+  background-repeat: no-repeat;
+  background-size  : cover;
+}
+
+.split.right::before {
+  content         : '';
+  position        : absolute;
+  width           : 100%;
+  height          : 100%;
+  background-color: var(--right-bg-color);
+}
+
+.split.right,
+.split.right::before,
+.split.left,
+.split.left::before {
+  transition: all var(--speed) ease-in-out;
+}
+
+.hover-left .left {
+  width: var(--hover-width);
+}
+
+.hover-left .right {
+  width: var(--other-width);
+}
+
+.hover-right .right {
+  width: var(--hover-width);
+}
+
+.hover-right .left {
+  width: var(--other-width);
+}
+
+@media (max-width: 800px) {
+  h1{
+    font-size: 2rem;
+    top: 30%;
+  }
+
+  .btn{
+    padding: 1.2rem;
+    width: 12rem;
+  }
+}
