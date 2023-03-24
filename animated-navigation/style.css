@@ -1,0 +1,119 @@
+/* FONTS */
+@import url(https://fonts.googleapis.com/css?family=Ubuntu);
+
+:root {
+  --dark           : #373737;
+  --light          : #fcfcfc;
+  --details        : #5151b4;
+  --background-up  : #9696e1;
+  --background-down: #030367;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family    : 'Ubuntu', sans-serif;
+  display        : flex;
+  align-items    : center;
+  justify-content: center;
+  height         : 100vh;
+  margin         : 0;
+
+  background-color: var(--background-up);
+  background-image: linear-gradient(to bottom, var(--background-up) 0%, var(--background-up) 50%, var(--background-down) 50%, var(--background-down) 100%);
+}
+
+nav {
+  background-color: var(--details);
+  box-shadow      : 0 6px 10px rgba(0, 0, 0, 0.5);
+  border-radius   : 3px;
+
+  display        : flex;
+  align-items    : center;
+  justify-content: center;
+
+  padding   : 20px;
+  width     : 80px;
+  transition: width 0.6s linear;
+}
+
+nav.active {
+  width: 350px;
+}
+
+nav ul {
+  display        : flex;
+  list-style-type: none;
+
+  padding: 0;
+  margin : 0;
+  width  : 0;
+
+  transition: width 0.6s linear;
+}
+
+nav.active ul {
+  width: 100%;
+}
+
+nav ul li {
+  transform: rotateY(0deg);
+  opacity  : 0;
+
+  transition: transform 0.6s linear, opacity 0.2s linear;
+}
+
+nav.active ul li {
+  transform: rotateY(360deg);
+  opacity  : 1;
+}
+
+nav ul a {
+  position       : relative;
+  color          : var(--light);
+  text-decoration: none;
+
+  margin: 0 10px;
+}
+
+.icon {
+  background-color: transparent;
+  border          : 0;
+  cursor          : pointer;
+
+  position: relative;
+  padding : 0;
+  height  : 30px;
+  width   : 30px;
+}
+
+.icon:focus {
+  outline: 0;
+}
+
+.icon .line {
+  background-color: var(--light);
+
+  position: absolute;
+  top     : 10px;
+  left    : 5px;
+  height  : 2px;
+  width   : 20px;
+
+  transition: transform 0.6s linear;
+}
+
+.icon .line2 {
+  top   : auto;
+  bottom: 10px;
+}
+
+nav.active .icon .line1 {
+  transform: rotate(-765deg) translateY(5.5px);
+}
+
+nav.active .icon .line2 {
+  transform: rotate(765deg) translateY(-5.5px);
+}
