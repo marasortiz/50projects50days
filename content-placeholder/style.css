@@ -1,0 +1,117 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --card      : #93e1fe;
+  --background: #333333;
+  --dark      : #174252;
+  --light     : #3d6e81;
+  --gray1     : #f6f7f8;
+  --gray2     : #edeef1;
+  --shadow    : rgba(0, 0, 0, 0.5)
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family    : "Roboto", sans-serif;
+  display        : flex;
+  flex-direction : column;
+  align-items    : center;
+  justify-content: center;
+  height         : 100vh;
+  overflow       : hidden;
+  margin         : 0;
+
+  background-color: var(--background);
+}
+
+img {
+  max-width: 100%;
+}
+
+.card {
+  width        : 350px;
+  border-radius: 10px;
+  overflow     : hidden;
+
+  box-shadow: 0 2px 10px var(--shadow);
+}
+
+.card-header {
+  height: 200px;
+}
+
+.card-header img {
+  object-fit: cover;
+
+  height: 100%;
+  width : 100%;
+}
+
+.card-content {
+  background-color: var(--card);
+  padding         : 30px;
+}
+
+.card-title {
+  height: 20px;
+  margin: 0;
+}
+
+.card-excerpt {
+  color : var(--dark);
+  margin: 10px 0 20px;
+}
+
+.author {
+  display: flex;
+}
+
+.profile-img {
+  border-radius: 50%;
+  overflow     : hidden;
+  height       : 40px;
+  width        : 40px;
+}
+
+.author-info {
+  display        : flex;
+  flex-direction : column;
+  justify-content: space-around;
+
+  width      : 100px;
+  margin-left: 10px;
+}
+
+.author-info small {
+  color     : var(--light);
+  margin-top: 5px;
+}
+
+.animated-bg {
+  background-image: linear-gradient(to right, var(--gray1) 0%, var(--gray2) 10%, var(--gray1) 20%, var(--gray1) 100%);
+  background-size : 200% 100%;
+
+  animation: bgPos 1s linear infinite;
+}
+
+.animated-bg-text {
+  border-radius: 50px;
+  display      : inline-block;
+  margin       : 0;
+  height       : 10px;
+  width        : 100%;
+}
+
+@keyframes bgPos {
+  0% {
+    background-position: 50% 0;
+  }
+
+  100% {
+    background-position: -150% 0;
+  }
+}
