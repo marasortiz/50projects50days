@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Double Click Hearts</title>
+	<style>
+		img {
+			max-width: 100%;
+		}
+		
+		.heart {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 50px;
+			height: 50px;
+			background-color: pink;
+			border-radius: 50%;
+			animation: pulse 1s ease infinite;
+			display: none;
+		}
+
+		@keyframes pulse {
+			0% {
+				transform: scale(1);
+			}
+			50% {
+				transform: scale(1.2);
+			}
+			100% {
+				transform: scale(1);
+			}
+		}
+	</style>
+</head>
+<body>
+	<h1>Double Click on the Picture</h1>
+	<p>You have clicked the picture <span id="count">0</span> times.</p>
+	<img src="https://picsum.photos/500" id="picture">
+	<div class="heart"></div>
+
+	<script>
+		let count = 0;
+		let picture = document.getElementById("picture");
+		let heart = document.querySelector(".heart");
+		let countText = document.getElementById("count");
+
+		picture.addEventListener("dblclick", function() {
+			count++;
+			countText.innerHTML = count;
+			heart.style.display = "block";
+
+			setTimeout(function() {
+				heart.style.display = "none";
+			}, 1000);
+		});
+	</script>
+</body>
+</html>
