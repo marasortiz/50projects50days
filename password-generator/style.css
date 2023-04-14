@@ -1,0 +1,137 @@
+@import url(https://fonts.googleapis.com/css?family=Mulish);
+
+:root {
+  --bg: #260e04;
+  --bx: #a44b11;
+  --tx: #e8ac5f;
+  --sw: rgba(255, 255, 255, 0.2);
+  --sb: rgba(0, 0, 0, 0.4);
+
+  --g: #26d32c;
+  --r: #a21313;
+
+  --p: 10px;
+  --m: 0 0 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family    : 'Mulish', sans-serif;
+  display        : flex;
+  flex-direction : column;
+  align-items    : center;
+  justify-content: center;
+  overflow       : hidden;
+
+  height : 100vh;
+  margin : var(--m);
+  padding: var(--p);
+
+  background-color: var(--bg);
+  color           : var(--tx);
+}
+
+h2 {
+  text-align: center;
+  margin    : 10px 0 20px;
+}
+
+.container {
+  max-width: 100%;
+  padding  : var(--p);
+  width    : 350px;
+
+  background-color: var(--bx);
+  box-shadow      : 0px 2px 10px var(--sw);
+}
+
+.result-container {
+  display        : flex;
+  justify-content: flex-start;
+  align-items    : center;
+  position       : relative;
+
+  font-size     : 18px;
+  letter-spacing: 1px;
+  padding       : 12px var(--p);
+  height        : 50px;
+  width         : 100%;
+
+  background-color: var(--sb);
+}
+
+.result-container #result {
+  word-wrap: break-word;
+  max-width: calc(100% - 40px);
+}
+
+.result-container .btn {
+  position: absolute;
+
+  font-size: 20px;
+  width    : 40px;
+  height   : 40px;
+  top      : 5px;
+  right    : 5px;
+}
+
+.btn {
+  border: none;
+  cursor: pointer;
+
+  font-size: 16px;
+  padding  : 8px 12px;
+
+  background-color: var(--bg);
+  color           : var(--tx);
+}
+
+.btn-large {
+  display: block;
+  width  : 100%;
+}
+
+.setting {
+  display        : flex;
+  justify-content: space-between;
+  align-items    : center;
+
+  margin: 15px 0;
+}
+
+input[type="number"] {
+  color           : var(--tx);
+  background-color: var(--bg);
+  border          : 1px solid var(--tx);
+
+  padding   : 2.5px;
+  text-align: center;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin            : 0;
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance   : none;
+  appearance        : none;
+  outline           : none;
+  cursor            : pointer;
+
+  border       : 2px solid var(--tx);
+  width        : 20px;
+  height       : 20px;
+  border-radius: 4px;
+
+  background-color: var(--r);
+}
+
+input[type="checkbox"]:checked {
+  background-color: var(--g);
+}
