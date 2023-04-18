@@ -1,0 +1,86 @@
+:root {
+  --sq: #1d1d1d;
+  --bg: #111111;
+  --sh: #000000;
+  --tx: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display        : flex;
+  flex-direction : column;
+  align-items    : center;
+  justify-content: center;
+  height         : 100vh;
+  overflow       : hidden;
+  margin         : 0;
+
+  background-color: var(--bg);
+  color           : var(--tx);
+}
+
+.text {
+  display        : flex;
+  flex-direction : column;
+  align-items    : center;
+  justify-content: center;
+
+  padding-bottom: 20px;
+}
+
+.text h2 {
+  margin: 0;
+}
+
+.text input {
+  border    : none;
+  text-align: center;
+
+  font-size    : 1em;
+  width        : 10%;
+  border-radius: 10px;
+
+  background-color: var(--sq);
+  color           : var(--tx);
+
+  -moz-appearance: textfield;
+  appearance     : textfield;
+}
+
+.container {
+  display        : flex;
+  flex-wrap      : wrap;
+  align-items    : center;
+  justify-content: center;
+
+  max-width: 400px;
+}
+
+.square {
+  height: 16px;
+  width : 16px;
+  margin: 2px;
+
+  background-color: var(--sq);
+  box-shadow      : 0 0 2px var(--sh);
+
+  transition: 2s ease;
+}
+
+.square:hover {
+  transition-duration: 0s;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin            : 0;
+}
+
+input[type="number"]::-moz-number-spin-box {
+  -moz-appearance: none;
+  margin         : 0;
+}
