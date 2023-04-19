@@ -4,7 +4,7 @@
 :root {
   --sg: rgba(100, 100, 100, 0.5);
   --sw: rgba(255, 255, 255, 0.6);
-  --sb: rgba(0,0,0,0.1);
+  --sb: rgba(0, 0, 0, 0.1);
   --b1: #efefbb;
   --b2: #d4d3dd;
   --cd: #eeeeee;
@@ -21,7 +21,7 @@ body {
   align-items    : center;
   justify-content: center;
 
-  margin         : 0;
+  margin: 0;
 
   background: var(--b1);
   background: linear-gradient(to right, var(--b2), var(--b1));
@@ -62,18 +62,54 @@ h1 {
   margin-top: 20px;
 }
 
-.pokemon .info{
+.pokemon .info {
   margin-top: 20px;
 }
 
-.pokemon .info .number{
+.pokemon .info .number {
   background-color: var(--sb);
-  padding: 5px 10px;
-  border-radius: 10px;
-  font-size: 0.8em;
+  padding         : 5px 10px;
+  border-radius   : 10px;
+  font-size       : 0.8em;
 }
 
 .pokemon .info .name {
-  margin: 15px 0 7px;
+  margin        : 15px 0 7px;
   letter-spacing: 1px;
+}
+
+.title {
+  width     : 100%;
+  padding   : 5px;
+  margin    : 10px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.buttons {
+  display       : flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+.btn {
+  margin: 2% 2%;
+  align-items        : center;
+  padding            : 6px 14px;
+  font-family        : -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+  border-radius      : 6px;
+  color              : #3D3D3D;
+  background         : var(--b1);
+  border             : none;
+  box-shadow         : 0px 0.5px 1px var(--sb);
+  user-select        : none;
+  -webkit-user-select: none;
+  touch-action       : manipulation;
+}
+
+.btn:focus {
+  box-shadow: 0px 0.5px 1px var(--sb), 0px 0px 0px 3.5px var(--sw);
+  outline   : 0;
 }
