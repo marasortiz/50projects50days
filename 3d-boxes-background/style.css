@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
+
+:root {
+  --bn: #f9ca24;
+  --bg: #fafafa;
+  --tx: #ffffff;
+  --bx: #ffff00;
+  --ba: #f6e58d;
+
+  --sy: rgba(249, 202, 36, 0.5);
+  --bs: 125px;
+  --bc: calc(var(--bs) * 4);
+  --bb: 600px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family    : 'Roboto', sans-serif;
+  display        : flex;
+  flex-direction : column;
+  align-items    : center;
+  justify-content: center;
+  height         : 100vh;
+  overflow       : hidden;
+  margin         : 0;
+
+  background-color: var(--bg);
+}
+
+.magic {
+  background-color: var(--bn);
+  color           : var(--tx);
+  font-family     : 'Poppins', sans-serif;
+  border          : 0;
+  border-radius   : 3px;
+  font-size       : 16px;
+  padding         : 12px 20px;
+  cursor          : pointer;
+  position        : fixed;
+  top             : 20px;
+  letter-spacing  : 1px;
+  box-shadow      : 0 3px var(--sh);
+  z-index         : 100;
+}
+
+.magic:focus {
+  outline: none;
+}
+
+.magic:active {
+  box-shadow: none;
+  transform : translateY(2px);
+}
+
+.boxes {
+  height         : var(--bc);
+  width          : var(--bc);
+  display        : flex;
+  flex-wrap      : wrap;
+  justify-content: space-around;
+  position       : relative;
+  transition     : .4s ease;
+}
+
+.boxes.big {
+  width : var(--bb);
+  height: var(--bb);
+}
+
+.boxes.big .box {
+  transform: rotateZ(360deg);
+}
+
+.box {
+  background-image : url('https://media.giphy.com/media/EZqwsBSPlvSda/giphy.gif');
+  background-repeat: no-repeat;
+  background-size  : var(--bc) var(--bc);
+  position         : relative;
+  height           : var(--bs);
+  width            : var(--bs);
+  transition       : .4s ease;
+}
+
+.box::after {
+  content         : '';
+  background-color: var(--ba);
+  position: absolute;
+  top: 8px;
+  right: -15px;
+  height: 100%;
+  width: 15px;
+  transform: skewY(45deg);
+}
+
+.box::before {
+  content         : '';
+  background-color: var(--bn);
+  position: absolute;
+  bottom:-15px;
+  left: 8px;
+  height: 15px;
+  width: 100%;
+  transform: skewX(45deg);
+}
