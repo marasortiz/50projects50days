@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --bg: #f8f9fd;
+  --bu: #ffffff;
+  --th: #ffffff;
+  --hd: #2b2727;
+  --li: #eeeeee;
+  --sh: rgba(0, 0, 0, 0.2);
+  --si: rgba(0, 0, 0, 0.3);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family    : "Roboto", sans-serif;
+  display        : flex;
+  align-items    : center;
+  justify-content: center;
+  height         : 100vh;
+  overflow       : hidden;
+  margin         : 0;
+
+  background-color: var(--bg);
+}
+
+.container {
+  overflow     : hidden;
+  width        : 300px;
+  border-radius: 5px;
+
+  box-shadow: 3px 3px 10px var(--sh);
+}
+
+.title {
+  margin: 0;
+}
+
+.subtitle {
+  display: inline-block;
+
+  opacity: 0.8;
+  margin : 5px 0 20px;
+}
+
+.header {
+  padding: 30px 20px;
+
+  background-color: var(--hd);
+  color           : var(--th);
+}
+
+.header input {
+  border       : 0;
+  border-radius: 50px;
+
+  font-size: 14px;
+  padding  : 10px 15px;
+  width    : 100%;
+
+  color           : var(--th);
+  background-color: var(--si);
+}
+
+.header input:focus {
+  outline: none;
+}
+
+.user-list {
+  list-style-type: none;
+  overflow-y     : auto;
+
+  margin    : 0;
+  padding   : 0;
+  max-height: 400px;
+
+  background-color: var(--bu);
+}
+
+.user-list li {
+  display: flex;
+  padding: 20px;
+}
+
+.user-list img {
+  object-fit   : cover;
+  border-radius: 50%;
+
+  height: 50px;
+  width : 50px;
+}
+
+.user-list .user-info {
+  margin-left: 10px;
+}
+
+.user-list .user-info h4 {
+  margin: 0 0 10px;
+}
+
+.user-list .user-info p {
+  font-size: 12px;
+}
+
+.user-list li:not(:nth-last-of-type) {
+  border-bottom: 1px solid var(--li);
+}
+
+.user-list li.hide {
+  display: none;
+}
