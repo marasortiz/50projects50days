@@ -1,0 +1,115 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+:root {
+  --bg: #fef9f2;
+  --tx: #000000;
+
+  --pc: #ffffff;
+
+  --th: #111111;
+  --ts: #555555;
+
+  --bt: #302d2b;
+  --tb: #ffffff;
+
+  --hr: #ff0000;
+
+  --s1: rgba(0, 0, 0, 0.3);
+  --s2: rgba(0, 0, 0, 0.5);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family    : 'Montserrat', sans-serif;
+  display        : flex;
+  align-items    : center;
+  justify-content: center;
+  height         : 100vh;
+  overflow       : hidden;
+  margin         : 0;
+
+  background-color: var(--bg);
+  color           : var(--tx);
+}
+
+.panel-container {
+  display        : flex;
+  flex-direction : column;
+  justify-content: center;
+  align-items    : center;
+  text-align     : center;
+
+  padding      : 30px;
+  max-width    : 400px;
+  border-radius: 4px;
+  font-size    : 90%;
+
+  background-color: var(--pc);
+  box-shadow      : 0 0 10px var(--s1);
+}
+
+.panel-container strong {
+  line-height: 20px;
+}
+
+.ratings-container {
+  display: flex;
+  margin : 20px 0;
+}
+
+.rating {
+  flex   : 1;
+  cursor : pointer;
+  padding: 20px;
+  margin : 10px 5px;
+}
+
+.rating:hover,
+.rating.active {
+  border-radius: 4px;
+  box-shadow   : 0 0 10px var(--s2);
+}
+
+.rating img {
+  width: 40px;
+}
+
+.rating small {
+  display: inline-block;
+  margin : 10px 0 0;
+  color  : var(--ts);
+}
+
+.rating:hover small,
+.rating.active small {
+  color: var(--th);
+}
+
+.btn {
+  cursor: pointer;
+
+  border       : 0;
+  border-radius: 4px;
+  padding      : 12px 30px;
+
+  background-color: var(--bt);
+  color           : var(--tb);
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.fa-heart {
+  font-size    : 30px;
+  margin-bottom: 10px;
+
+  color: var(--hr);
+}
