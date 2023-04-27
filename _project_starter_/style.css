@@ -1,13 +1,10 @@
 /* FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&family=Roboto:wght@400;700&display=swap');
 
-/* :root {
-  --line-border-fill : #4b2d3f;
-  --circles          : #694a5c;
-  --background       : #e2bdd2;
-  --line-border-empty: #ffffff;
-  --text             : #ffffff;
-} */
+:root {
+  --bg: #ffffff;
+  --tx: #000000;
+}
 
 * {
   box-sizing: border-box;
@@ -22,4 +19,7 @@ body {
   height         : 100vh;
   overflow       : hidden;
   margin         : 0;
+
+  background-color: var(--bg);
+  color           : var(--tx);
 }
