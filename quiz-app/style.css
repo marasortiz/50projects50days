@@ -1,0 +1,92 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins);
+
+:root {
+  --b1: #b8c9db;
+  --b2: #f5f7fa;
+  --tx: #000000;
+
+  --bc: #ffffff;
+
+  --bb: #8e44ad;
+  --bh: #732d91;
+  --bf: #5e3370;
+  --bt: #ffffff;
+
+  --sh: rgba(100, 100, 100, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family    : 'Poppins', sans-serif;
+  display        : flex;
+  align-items    : center;
+  justify-content: center;
+  height         : 100vh;
+  overflow       : hidden;
+  margin         : 0;
+
+  background-image: linear-gradient(315deg, var(--b1) 0%, var(--b2) 100%);
+  background-color: var(--b1);
+  color           : var(--tx);
+}
+
+.quiz-container {
+  overflow: hidden;
+
+  border-radius: 10px;
+  width        : 600px;
+
+  background-color: var(--bc);
+  box-shadow      : 0 0 10px var(--sh);
+}
+
+.quiz-header {
+  padding: 4rem;
+}
+
+h2 {
+  text-align: center;
+
+  margin : 0;
+  padding: 1rem;
+}
+
+ul {
+  list-style-type: none;
+  padding        : 0;
+}
+
+ul li {
+  font-size: 1.2rem;
+  margin   : 1rem 0;
+}
+
+ul li label {
+  cursor: pointer;
+}
+
+button {
+  display    : block;
+  cursor     : pointer;
+  font-family: inherit;
+  border     : none;
+
+  width    : 100%;
+  font-size: 1.1rem;
+  padding  : 1.3rem;
+
+  background-color: var(--bb);
+  color           : var(--bt);
+}
+
+button:hover {
+  background-color: var(--bh);
+}
+
+button:focus {
+  background-color: var(--bf);
+  outline         : none;
+}
